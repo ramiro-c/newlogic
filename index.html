@@ -188,8 +188,7 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Equipo</h2>
-          <h3 class="section-subheading text-muted">Somos un equipo conectado para desarrollar y brindar las mejores
-            soluciones.</h3>
+          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
       </div>
       <div class="row">
@@ -273,7 +272,56 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Seccion contacto con axios -->
+  <section id="contact">
+    <div class="container wow fadeInUp">
+      <div class="section-header">
+        <h3 class="section-title">Contacto</h3>
+        <p class="section-description">...</p>
+      </div>
+    </div>
+    <div class="container wow fadeInUp mt-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-8">
+          <div class="form">
+            <div id="sendmessage">Tu mensaje ha sido enviado. ¡Gracias!</div>
+            <div id="errormessage">Ha ocurrido un error.</div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4"
+                  data-msg="El nombre debe tener minimo 4 caracteres" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email"
+                  data-msg="Por favor ingrese un email" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto"
+                  data-rule="minlen:4" data-msg="El asunto debe tener minimo 4 caracteres" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" id="message" data-rule="required"
+                  data-msg="Por favor ingrese un mensaje" placeholder="Mensaje"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div id="form-success" class="form-group">
+                <span style="color:blue">Fue enviado con exito</span>
+              </div>
+              <div id="form-error" class="form-group">
+                <span style="color:red">Error al enviar</span>
+              </div>
+              <div class="text-center"><button type="submit">Enviar mensaje</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- #contact -->
+
+  <!-- Contact 
   <section class="page-section" id="contact">
     <div class="container">
       <div class="row">
@@ -322,6 +370,7 @@
       </div>
     </div>
   </section>
+  -->
 
   <!-- Footer -->
   <footer class="footer">
@@ -366,19 +415,16 @@
               <div class="modal-body">
                 <!-- Project Details Go Here -->
                 <h2 class="text-uppercase">Home Market</h2>
-                <p class="item-intro text-muted">Compre desde la comodidad de su casa</p>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                 <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
                 <p>
-                  Proyecto en el cual los usuarios podrían realizar las compras del supermercado desde la comodidad de
-                  sus casas y solo ir al establecimiento a retirar los productos que compró.
-                </p>
-                <p>
+                  Proyecto en el cual los usuarios podrian realizar las compras del supermercado desde la comodidad de
+                  sus casas y solo ir al establecimiento a retirar los productos que compro.
                   Esto evitaría las colas y amontonamiento de gente en dichos establecimientos.
                 </p>
                 <p>
                   Cualquier tipo de duda sobre el proyecto, su funcionalidad o si querrías implementarlo en tu negocio
-                  pueden hablarnos por privado o enviarnos un email a: <strong>newlogiclp@gmail.com</strong>
-                </p>
+                  pueden hablarnos por privado o mandarnos un mail newlogiclp@gmail.com </p>
                 <ul class="list-inline">
                   <li>Categoria: E-Commerce</li>
                 </ul>
@@ -401,8 +447,12 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Contact form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
+  <script src="js/contactform.js"></script>
+  <!-- script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script -->
+
+  <!-- Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>

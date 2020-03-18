@@ -9,7 +9,7 @@ jQuery(document).ready(function ($) {
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
-    const info = {
+    var info = {
       name: f[0].children[0].value,
       email: f[1].children[0].value,
       subject: f[2].children[0].value,
@@ -99,7 +99,7 @@ jQuery(document).ready(function ($) {
     if (ferror) return false;
     else var data = $(this).serialize();
 
-    const headers = {
+    var headers = {
       'Access-Control-Allow-Origin': '*'
     }
 
@@ -107,7 +107,7 @@ jQuery(document).ready(function ($) {
     $('#email').val('');
     $('#subject').val('');
     $('#message').val('');
-    axios.post(URL + "/api/formsubmit", info, headers)
+    axios.post("/mail/contact_me.php", info, headers)
       .then(function (response) {
         $('#form-success').show();
         setTimeout(function () { $('#form-success').hide(); }, 3000);
