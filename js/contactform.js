@@ -4,17 +4,17 @@ jQuery(document).ready(function ($) {
 
   //Contact
   $('form.contactForm').submit(function (event) {
-    event.preventDefault;
+    event.preventDefault();
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
-
-    var info = {
-      name: f[0].children[0].value,
-      email: f[1].children[0].value,
-      subject: f[2].children[0].value,
-      message: f[3].children[0].value,
-    }
+      var info = {
+        name: f[0].children[0].value,
+        email: f[1].children[0].value,
+        subject: f[2].children[0].value,
+        message: f[3].children[0].value,
+      }
+      console.log(info)
     f.children('input').each(function () { // run all inputs
 
       var i = $(this); // current input
@@ -114,6 +114,7 @@ jQuery(document).ready(function ($) {
       })
       .catch(function (error) {
         $('#form-error').show();
+        console.log('no se envio');
         setTimeout(function () { $('#form-error').hide(); }, 3000);
       });
   });
