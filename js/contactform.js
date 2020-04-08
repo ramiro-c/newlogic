@@ -107,7 +107,7 @@ jQuery(document).ready(function ($) {
     $('#email').val('');
     $('#subject').val('');
     $('#message').val('');
-    axios.post("/mail/contact_me.php", info, headers)
+    axios.post("../mail/contact_me.php", info, headers)
       .then(function (response) {
         $('#form-success').show();
         setTimeout(function () { $('#form-success').hide(); }, 3000);
